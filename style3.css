@@ -19,23 +19,69 @@
     margin: 0 auto 10px;
 }
 
+/* Navbar Styling */
 .navbar {
     display: flex;
-    width: 100%;
     background-color: #333;
+    padding: 10px;
 }
-.navitem {
-    flex-direction: column;
-    margin: 5px;
-    padding: 20px;
+
+.nav-list {
+    list-style: none;
+    display: inline-flex; /*this made it horizntally flex the items?? not sure*/
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    position: relative;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
     color: white;
-    text-decoration-color: #333;
+    border-radius: 5px; /* Slightly rounded by default */
+    padding: 10px;
+    display: block;
 }
-.navitem:hover{
+
+/* Hover effect */
+.nav-list a:hover {
     background-color: #bdbbbb;
-    text-decoration-color: #bdbbbb;
 }
-.dropdown{
+
+/* Dropdown Menu */
+.dropdown {
     display: none;
-    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    border: 1px solid #ccc;
 }
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown a {
+    padding: 10px;
+    color: black;
+    display: block;
+    background-color: white;
+    text-align: left;
+}
+
+.dropdown a:hover {
+    background-color: white;
+}
+
+/* Show dropdown when hovering over first navbar item */
+.nav-item:hover .dropdown {
+    display: block;
+}
+
